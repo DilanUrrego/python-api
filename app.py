@@ -34,5 +34,9 @@ def post_days():
 def saludar():
     return "Hi, get method works well!!"
 
+@app.route("/hi", methods=["POST"])
+def post_hi():
+    return jsonify({"success": True}), 201
+
 if __name__ == "__main__":
     app.run(debug=True)
