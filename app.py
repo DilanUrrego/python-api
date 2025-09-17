@@ -25,7 +25,6 @@ def get_day(day_id):
         abort(404)
     return jsonify({"day": day[0]})
 
-
 @app.route("/", methods=["POST"])
 def post_days():
     return jsonify({"success": True}), 201
